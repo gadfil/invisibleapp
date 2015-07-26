@@ -1,0 +1,159 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent">
+
+
+        <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/tools"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+
+
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <!--android:elevation="@dimen/default_elevation"-->
+
+
+        </android.support.v7.widget.Toolbar>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:textColor="@android:color/white"
+
+            app:met_floatingLabel="normal"
+
+            />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/etLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etEmail"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:hint="Login"
+            android:inputType="textEmailAddress"
+            android:textColor="@android:color/white"
+            app:met_floatingLabel="normal" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/etDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etLogin"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:hint="Description"
+            android:inputType="text"
+            android:textColor="@android:color/white"
+            app:met_floatingLabel="normal" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/etPassowrd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etDescription"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:hint="Password"
+            android:inputType="text"
+            android:textColor="@android:color/white"
+            app:met_floatingLabel="normal" />
+        <!--</LinearLayout>-->
+        <!--</ScrollView>-->
+
+
+        <TextView
+            android:id="@+id/center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true" />
+
+        <com.gc.materialdesign.views.ButtonFlat
+            android:id="@+id/btLogIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="15dp"
+            android:layout_toRightOf="@+id/center"
+
+            android:background="@color/primary_dark"
+            android:text="Log In" />
+
+        <com.gc.materialdesign.views.ButtonFlat
+            android:id="@+id/btForgetPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="15dp"
+            android:layout_toLeftOf="@+id/center"
+
+            android:background="@color/primary_dark"
+            android:text="Forget Password" />
+
+        <com.gc.materialdesign.views.ButtonRectangle
+            android:id="@+id/btSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btLogIn"
+            android:layout_alignParentRight="true"
+            android:layout_margin="15dp"
+            android:background="@color/primary_dark"
+            android:text="Sign Up" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/avatar"
+            android:layout_below="@+id/toolbar"
+            android:adjustViewBounds="true"
+            android:layout_centerInParent="true"
+            android:visibility="gone"/>
+        <com.gc.materialdesign.views.ButtonFloat
+            android:id="@+id/btOk"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="16dp"
+            android:layout_marginRight="24dp"
+            android:background="@color/primary"
+            materialdesign:animate="false"
+            android:visibility="gone"
+            materialdesign:iconDrawable="@drawable/ic_navigation_check" />
+
+
+    </RelativeLayout>
+
+    <sys.android.app.ui.view.RevealBackgroundView
+        android:id="@+id/vRevealBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        />
+
+
+</RelativeLayout>

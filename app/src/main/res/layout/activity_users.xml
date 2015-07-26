@@ -1,0 +1,48 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="sys.android.app.ui.activity.UsersActivity">
+
+    <RelativeLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent">
+
+        <com.github.florent37.materialviewpager.MaterialViewPager
+            android:id="@+id/materialViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            app:viewpager_color="@color/primary"
+            app:viewpager_enableToolbarElevation="true"
+            app:viewpager_headerAlpha="0.6"
+            app:viewpager_headerHeight="200dp"
+            app:viewpager_hideLogoWithFade="false"
+            app:viewpager_hideToolbarAndTitle="true"
+            app:viewpager_logoMarginTop="100dp"
+            app:viewpager_pagerTitleStrip="@layout/material_view_pager_pagertitlestrip_standard" />
+
+        <com.gc.materialdesign.views.ButtonFloat
+            android:id="@+id/btAdd"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="16dp"
+            android:layout_marginRight="24dp"
+            android:background="@color/primary"
+            materialdesign:animate="false"
+            materialdesign:iconDrawable="@drawable/ic_content_add" />
+
+    </RelativeLayout>
+    <sys.android.app.ui.view.RevealBackgroundView
+        android:id="@+id/vRevealBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        />
+</RelativeLayout>
